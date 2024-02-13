@@ -133,6 +133,7 @@ body {
 
 .card-form input:focus {
     outline: none;
+    cursor: auto
 }
 
 .card-form .error-input {
