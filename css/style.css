@@ -1,0 +1,272 @@
+:root {
+    --color-tomato: hsl(4, 100%, 67%);
+    --color-darkStaleGrey: hsl(234, 29%, 20%);
+    --color-charcoalGrey: hsl(235, 18%, 26%);
+    --color-grey: hsl(231, 7%, 60%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+@media(min-width: 1024px) {
+    body {
+        background: var(--color-darkStaleGrey);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* utility clases*/
+
+.show {
+
+    display: none;
+
+}
+
+.bg-white {
+    background: var(--color-white);
+}
+
+/* *************** CARD ***************/
+
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.card-image {
+    /*  max-height: 350px; */
+    height: 100%;
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem 1.5rem 1.8rem 1.5rem;
+}
+
+
+.card-title {
+    padding-top: .8rem;
+    font-size: 35px;
+    letter-spacing: 1.4px;
+}
+
+.card-paragraph {
+    padding-top: 23px;
+    line-height: 25px;
+}
+
+
+.card-list {
+    padding-top: 20px;
+    padding-left: 27px;
+    line-height: 23px;
+    list-style: url(../assets/images/icon-list.svg);
+
+}
+
+
+.card-list li {
+    padding-left: 9px;
+
+}
+
+.card-list li+li {
+    padding-top: 8px;
+}
+
+.card-form {
+    padding-top: 30px;
+}
+
+
+
+.card-form .card-lbl-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-form label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-form .error-message {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-tomato);
+    display: none;
+}
+
+
+.card-form input {
+    margin-top: 13px;
+    width: 100%;
+    height: 54px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+.card-form input:focus {
+    outline: none;
+}
+
+.card-form .error-input {
+    border: 1px solid var(--color-tomato);
+    background: hsl(5, 100%, 95%);
+    color: var(--color-tomato);
+}
+
+
+.card-form input::placeholder {
+    font-size: 15px;
+    letter-spacing: .8px;
+}
+
+.card-form button,
+.card-success-container button {
+    margin-top: 25px;
+    width: 100%;
+    height: 55px;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-darkStaleGrey);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.card-form button:hover,
+.card-success-container button:hover {
+    background-image: linear-gradient(to right, var(--color-tomato) 90%, hsl(23, 71%, 67%) 110%);
+    box-shadow: 0 1px 20px var(--color-tomato);
+}
+
+@media(min-width: 1024px) {
+    .card {
+        max-width: 929px;
+        padding: 1.5rem;
+        border-radius: 37px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .card-image {
+        flex: 1;
+    }
+
+    .card-body {
+        flex: 1;
+        padding-top: 50px;
+        padding: 60px 1.5rem 1.8rem 36px;
+    }
+
+    .card-title {
+        padding-top: .6rem;
+        font-size: 50px;
+        letter-spacing: 1.4px;
+
+    }
+
+    .card-form {
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+
+
+}
+
+/* *************** CARD SUCCESS ***************/
+.card-success {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card-success-container {
+    padding: 150px 1.6rem 1.8rem 25px;
+}
+
+.card-success-container .card-title {
+    padding-top: 36px;
+    letter-spacing: 1.2px;
+}
+
+.card-success-container .email-sended {
+    font-weight: bold;
+}
+
+.card-success-container .card-paragraph {
+    padding-top: 20px;
+    line-height: 24px;
+}
+
+.card-success-container .button-container {
+    padding-top: 265px;
+}
+
+@media(min-width: 1024px) {
+
+    .card-success {
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 37px;
+        background: var(--color-white);
+        overflow: hidden;
+    }
+
+    .card-success-container {
+        padding: 60px 60px;
+
+    }
+
+
+    .card-success-container .card-title {
+        padding-top: 20px;
+        font-size: 52px;
+        line-height: 55px;
+
+    }
+
+    .card-success-container .card-paragraph {
+        padding-top: 28px;
+        line-height: 24px;
+    }
+
+    .card-success-container .button-container {
+        padding-top: 0px;
+    }
+
+
+
+}
